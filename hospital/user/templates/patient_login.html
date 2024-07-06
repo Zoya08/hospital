@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %} <!--The {% load static %} tag is used to include Django’s static file handling at the beginning of the document.-->
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <title>{{ title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+
+    <!-- Fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<!-- Topbar Start -->
+<div class="container-fluid py-2 border-bottom d-none d-lg-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start">
+                    <a class="text-decoration-none text-body pe-3 mb-2 mb-lg-0" href="" style="color: #1D2A4D;">
+                        <i class="bi bi-telephone me-2" style="color: #1D2A4D;"></i>08789****97</a>
+                    <span class="text-body d-none d-lg-inline">|</span>
+                    <a class="text-decoration-none text-body px-lg-3" href="" style="color: #1D2A4D;">
+                        <i class="bi bi-envelope me-2" style="color: #1D2A4D;"></i>zoyakaynat@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="d-flex justify-content-center justify-content-lg-end">
+                    <a class="text-body px-2" href= https://www.linkedin.com/in/zoya-kaynat-387a16258 target="_blank"><i class="fab fa-linkedin-in" style="color: #1D2A4D;"></i></a>
+                    <a class="text-body px-2" href =https://github.com/Zoya08 target="_blank"><i class="fab fa-github" style="color: #1D2A4D;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid sticky-top bg-white shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <h1 class="m-0 text-uppercase" style="color: #13C5DD; font-size: 1.5rem;">
+                    <i class="fa fa-clinic-medical me-2" style="color: #13C5DD;"></i>Medinova Hospital</h1>
+            </a>
+        </nav>
+    </div>
+</div>
+      
+      <!-- Login Form Start -->
+      <div class="container p-5">
+          <div class="row">
+              <div class="col-md-4 offset-md-4">
+                  <div class="card point-card">
+                      <div class="card-body">
+                          <h1 class="fs-4 text-center" style="color: #13C5DD;">Patient Login</h1>
+                          <form action="{% url 'patient_login' %}" method="post">
+                              {% csrf_token %}
+                              <div class="mb-3">
+                                  <label class="form-label">Email Id:</label>
+                                  <input required name="email" type="text" class="form-control">
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label">Password:</label>
+                                  <input required name="password" type="password" class="form-control">
+                              </div>
+                              <button type="submit" class="btn text-white col-md-12" style="background-color:#13C5DD;">Login</button><br>
+                              <p> Don't have an account?<a href="{% url 'patient_register' %}">Here Sign-In</a></p>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Login Form End -->
+      
+          </body>
+      
+</html>
