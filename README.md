@@ -11,10 +11,6 @@ A comprehensive system for managing hospital operations, patient care, and admin
 - Django
 - HTML/CSS/JavaScript/Boostrap
 
-## Installation
-1. Clone the repository
-2. [Add more steps here]
-
 ## Usage
 1. Ensure you have Python and Django installed on your system.
 2. Navigate to the project directory in your terminal
