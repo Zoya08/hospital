@@ -379,52 +379,67 @@ information, and a footer. -->
 
 <!-- service end -->
 
-<!-- Doctor Dashboard Start -->
-<div class="container-fluid py-5 section" id="home">
+<!-- Appointment Start -->
+<div class="container-fluid py-5 section" id="appointment">
     <div class="container">
         <div class="row gx-5">
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="mb-4">
-                    <h5 class="d-inline-block text-uppercase border-bottom border-5" style="color: #13C5DD;">Dashboard</h5>
-                    <h1 class="display-4" style="color: #1D2A4D;">Doctor's Appointment & Patient List</h1>
+                    <h5 class="d-inline-block text-uppercase border-bottom border-5" style="color: #13C5DD;">Appointment</h5>
+                    <h1 class="display-4" style="color: #1D2A4D;">Make An Appointment For Your Family</h1>
                 </div>
-                <p class="mb-5">Welcome to your dashboard. Here you can view your upcoming appointments and manage patient records efficiently.</p>
+                <p class="mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                <a class="btn btn-primary rounded-pill py-3 px-5 me-3" href="#doctors">Find Doctor</a>
+                <a class="btn btn-outline-primary rounded-pill py-3 px-5" href="">Read More</a>
             </div>
             <div class="col-lg-6">
-                <div class="bg-light rounded p-5">
-                    <h1 class="mb-4" style="color: #1D2A4D;">Upcoming Appointments</h1>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Patient Name</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Specialist</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>2025-02-10</td>
-                                <td>10:00 AM</td>
-                                <td>Cardiology</td>
-                            </tr>
-                            <tr>
-                                <td>Jane Smith</td>
-                                <td>2025-02-11</td>
-                                <td>11:30 AM</td>
-                                <td>Dermatology</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <a class="btn btn-primary w-100 py-3" href="#">View All Appointments</a>
+                <div class="bg-light text-center rounded p-5">
+                    <h1 class="mb-4" style="color: #1D2A4D;">Book An Appointment</h1>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <select name="specialist" class="form-control bg-white border-0" style="height: 50px;">
+                                    <option value="" selected disabled>Choose Specialist</option>
+                                    <option value="1">Dermatologist</option>
+                                    <option value="2">Cardiology</option>
+                                    <option value="3">Gynaecology</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select name="doctor" class="form-control bg-white border-0" style="height: 50px;">
+                                    <option value="" selected disabled>Select Doctor</option>
+                                    <option value="1">Dr. Jeff Harvey</option>
+                                    <option value="2">Dr. Steve Obroy</option>
+                                    <option value="3">Dr. Noa Blake</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" name="name" class="form-control bg-white border-0" placeholder="Your Name" style="height: 50px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" name="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="date" name="date" class="form-control bg-white border-0 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 50px;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input type="time" name="time" class="form-control bg-white border-0 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Make An Appointment</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Doctor Dashboard End -->
-
+<!-- Appointment End -->
 
 
     <!-- Team Start -->
